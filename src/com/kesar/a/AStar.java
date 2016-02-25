@@ -1,3 +1,4 @@
+package com.kesar.a;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -16,61 +17,9 @@ public class AStar
 	public final static int DIRECT_VALUE = 10; // 横竖移动代价
 	public final static int OBLIQUE_VALUE = 14; // 斜移动代价
 	
-	/**
-	 * 包含地图所需的所有输入数据
-	 */
-	static class MapInfo
-	{
-		int[][] maps; // 二维数组的地图
-		int width; // 地图的宽
-		int hight; // 地图的高
-		Node start; // 起始结点
-		Node end; // 最终结点
-		
-		public MapInfo(int[][] maps, int width, int hight, Node start, Node end)
-		{
-			this.maps = maps;
-			this.width = width;
-			this.hight = hight;
-			this.start = start;
-			this.end = end;
-		}
-	}
-	
 	Queue<Node> openList = new PriorityQueue<Node>(); // 优先队列(升序)
 	List<Node> closeList = new ArrayList<Node>();
 	
-	public static void main(String[] args)
-	{
-		int[][] maps = { 
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0 },
-				{ 0, 0, 0, 8, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0 },
-				{ 0, 0, 0, 8, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 8, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 8, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0 } 
-				};
-		MapInfo info=new MapInfo(maps,maps[0].length, maps.length,new Node(1, 5), new Node(10, 5));
-		new AStar().start(info);
-		printMap(maps);
-	}
-
-	/**
-	 * 打印地图
-	 */
-	public static void printMap(int[][] maps)
-	{
-		for (int i = 0; i < maps.length; i++)
-		{
-			for (int j = 0; j < maps[i].length; j++)
-			{
-				System.out.print(maps[i][j] + " ");
-			}
-			System.out.println();
-		}
-	}
-
 	/**
 	 * 开始算法
 	 */
