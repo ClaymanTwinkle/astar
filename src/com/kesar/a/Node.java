@@ -36,11 +36,4 @@ public class Node implements Comparable<Node>
 		else if (G + H < o.G + o.H) return -1;
 		return 0;
 	}
-
-	@Override
-	public String toString()
-	{
-		return "Node [coord=" + coord + "]";
-	}
-
 }
