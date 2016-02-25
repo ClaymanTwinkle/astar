@@ -3,6 +3,12 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+/**
+ * 
+ * ClassName: AStar 
+ * @Description: A星算法
+ * @author kesar
+ */
 public class AStar
 {
 	public final static int BAR = 1; // 障碍值

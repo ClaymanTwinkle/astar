@@ -1,7 +1,6 @@
 /**
  * 
- * ClassName: Node
- * 
+ * ClassName: Node 
  * @Description: 路径结点
  * @author kesar
  */

@@ -1,8 +1,8 @@
 /**
  * 
- * ClassName: Coord
- * 
+ * ClassName: Coord 
  * @Description: 坐标
+ * @author kesar
  */
 public class Coord
 {
