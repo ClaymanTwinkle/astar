@@ -22,5 +22,4 @@ public class MapInfo
 		this.start = start;
 		this.end = end;
 	}
-
 }
