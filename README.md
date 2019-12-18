@@ -352,14 +352,14 @@ private void moveNodes(MapInfo mapInfo)
 {
     while (!openList.isEmpty())
     {
+        Node current = openList.poll();
+        closeList.add(current);
+        addNeighborNodeInOpen(mapInfo,current);
         if (isCoordInClose(mapInfo.end.coord))
         {
             drawPath(mapInfo.maps, mapInfo.end);
             break;
         }
-        Node current = openList.poll();
-        closeList.add(current);
-        addNeighborNodeInOpen(mapInfo,current);
     }
 }
 ```
