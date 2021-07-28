@@ -150,8 +150,7 @@ public class AStar
 	 */
 	private int calcH(Coord end,Coord coord)
 	{
-		return Math.abs(end.x - coord.x)
-				+ Math.abs(end.y - coord.y);
+		return (Math.abs(end.x - coord.x) + Math.abs(end.y - coord.y)) * DIRECT_VALUE;
 	}
 	
 	/**
